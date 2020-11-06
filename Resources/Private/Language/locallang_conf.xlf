@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:tk_composer/Resources/Private/Language/locallang_conf" date="2020-09-28T00:00:00Z" product-name="tk_composer">
+		<header />
+		<body>
+			<trans-unit id="basic.storagePath" resname="basic.storagePath">
+				<source>
+					Storage Path:
+					Path for cached files and cloned repositories, absolute (with leading /) or relative to the project
+					root.
+				</source>
+			</trans-unit>
+			<trans-unit id="basic.repositoryRootPath" resname="basic.repositoryRootPath">
+				<source>
+					Repository Root Path:
+					Root path to repositories, absolute (leading /) or relative to the project root.
+					When adding a new package, the repository is searched in this directory before cloning it.
+					This increases performance and reduces needed disk space.
+				</source>
+			</trans-unit>
+			<trans-unit id="frontend.disable" resname="frontend.disable">
+				<source>
+					Disable frontend:
+					If the frontend is disabled, a 404 status code is sent.
+				</source>
+			</trans-unit>
+			<trans-unit id="frontend.title" resname="frontend.title">
+				<source>
+					Title (e.g. website name):
+					This will be displayed inside the header and the footer of the frontend view.
+				</source>
+			</trans-unit>
+			<trans-unit id="frontend.footer.description" resname="frontend.footer.description">
+				<source>
+					Description:
+					This will be displayed inside the footer of the frontend view.
+				</source>
+			</trans-unit>
+			<trans-unit id="frontend.footer.name" resname="frontend.footer.name">
+				<source>
+					Name (e.g. company name):
+					This will be displayed inside the footer of the frontend view.
+				</source>
+			</trans-unit>
+			<trans-unit id="frontend.footer.homepage" resname="frontend.footer.homepage">
+				<source>
+					Homepage (e.g. your company's homepage):
+					This will be linked inside the footer of the frontend view.
+				</source>
+			</trans-unit>
+			<trans-unit id="frontend.footer.copyrightNotice" resname="frontend.footer.copyrightNotice">
+				<source>
+					Copyright notice:
+					This will be added to the copyright year in the frontend.
+				</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

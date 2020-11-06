@@ -1,0 +1,28 @@
+{
+	"name": "tk-typo3/tk-composer",
+	"type": "typo3-cms-extension",
+	"description": "Serve composer packages to authorized accounts.",
+	"readme": "README.md",
+	"authors": [
+		{
+			"name": "Timon Kreis",
+			"email": "mail@timonkreis.de",
+			"homepage": "https://www.timonkreis.de/",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": ">=7.1",
+		"ext-json": "*",
+		"composer/semver": "^1.0",
+		"typo3/cms-core": "^10.4"
+	},
+	"suggest": {
+		"typo3/cms-scheduler": "Use TYPO3 scheduler to update packages in planned intervals."
+	},
+	"autoload": {
+		"psr-4": {
+			"TimonKreis\\TkComposer\\": "Classes"
+		}
+	}
+}

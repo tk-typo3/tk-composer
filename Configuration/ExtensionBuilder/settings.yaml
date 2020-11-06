@@ -1,0 +1,34 @@
+overwriteSettings:
+  Classes:
+    Controller: merge
+    Domain:
+      Model: merge
+      Repository: merge
+  Configuration:
+    TypoScript: keep
+  Resources:
+    Private:
+      Language: merge
+      Templates: keep
+    Public:
+      Icons:
+        Extension.svg: keep
+  ext_localconf.php: merge
+  ext_tables.php: merge
+  ext_tables.sql: merge
+
+staticDateInXliffFiles: 2020-09-28T00:00:00Z
+
+skipDocComment: true
+
+classBuilder:
+  Controller:
+    parentClass: \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
+  Model:
+    AbstractEntity:
+      parentClass: \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+    AbstractValueObject:
+      parentClass: \TYPO3\CMS\Extbase\DomainObject\AbstractValueObject
+  Repository:
+    parentClass: \TimonKreis\TkComposer\Domain\Repository\AbstractRepository
+  setDefaultValuesForClassProperties: true

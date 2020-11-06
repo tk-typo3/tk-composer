@@ -1,0 +1,24 @@
+<html data-namespace-typo3-fluid="true" lang="en">
+
+<div class="card mb-3 package"
+        data-description="{package.description}"
+        data-name="{package.packageName}"
+        data-repository-url="{package.repositoryUrl}">
+    <div class="card-body">
+        <code class="pull-right text-muted">{package.repositoryUrl}</code>
+        <div class="h4 card-title">{package.packageName}</div>
+        <div>{package.description}</div>
+    </div>
+    <div class="card-footer text-right">
+        <a class="btn btn-sm btn-primary d-block d-md-inline" data-clipboard="{package.repositoryUrl}" href="#">
+            <span aria-hidden="true" class="fa fa-copy"></span>
+            Copy repository URL
+        </a>
+        <a class="btn btn-sm btn-primary d-block d-md-inline"
+                data-clipboard='"{package.packageName}": "^{package.latestTag}"'
+                href="#">
+            <span aria-hidden="true" class="fa fa-copy"></span>
+            Copy composer requirement
+        </a>
+    </div>
+</div>

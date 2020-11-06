@@ -1,0 +1,14 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  TimonKreis\TkComposer\:
+    resource: '../Classes/*'
+  TimonKreis\TkComposer\Command\UpdatePackagesCommand:
+    tags:
+      - name: console.command
+        command: composer:update
+  TimonKreis\TkComposer\Middleware\Frontend:
+    public: true

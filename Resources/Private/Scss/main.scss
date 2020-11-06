@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/*!
+ * @author Timon Kreis <mail@timonkreis.de>
+ * @copyright by Timon Kreis - All rights reserved
+ * @license http://www.opensource.org/licenses/mit-license.html
+ */
+
+@import 'mdbootstrap';
+@import 'fontawesome';
+
+#login-mask {
+    position: relative;
+
+    .card {
+        border-top: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        position: absolute;
+        right: 0;
+        z-index: 5; // Higher than .form-control:focus
+        width: 300px;
+
+        @include media-breakpoint-down(sm) {
+            width: map-get($container-max-widths, sm);
+        }
+    }
+}

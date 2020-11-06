@@ -1,0 +1,17 @@
+{
+	"private": true,
+	"devDependencies": {
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^7.0.1",
+		"gulp-rename": "^2.0.0",
+		"gulp-sass": "^4.1.0",
+		"gulp-sourcemaps": "^2.6.5",
+		"gulp-uglify": "^3.0.2",
+		"bootstrap": "^4.5.3",
+		"mdbootstrap": "^4.19.1",
+		"font-awesome": "^4.7.0"
+	},
+	"browserslist": [
+		"last 10 versions"
+	]
+}

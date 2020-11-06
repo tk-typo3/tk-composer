@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="EXT:tk_composer/Resources/Private/Language/locallang_csh" date="2020-09-28T00:00:00Z" product-name="tk_composer">
+		<header />
+		<body>
+			<trans-unit id="repository_url.description" resname="repository_url.description">
+				<target>URL des Repositories, SSH oder HTTP(S).</target>
+			</trans-unit>
+			<trans-unit id="type.description" resname="type.description">
+				<target>Typ des Repositories.</target>
+			</trans-unit>
+			<trans-unit id="access.description" resname="access.description">
+				<target>
+					&lt;ul&gt;
+						&lt;li&gt;Private Repositories sind nur für zugewiesene Accounts sichtbar.&lt;/li&gt;
+						&lt;li&gt;Geschützte Repositories sind für alle angemeldeten Accounts sichtbar.&lt;/li&gt;
+						&lt;li&gt;Öffentliche Repositories sind für jeden sichtbar.&lt;/li&gt;
+					&lt;/ul&gt;
+				</target>
+			</trans-unit>
+			<trans-unit id="relation.description" resname="relation.description">
+				<target>Beziehung</target>
+			</trans-unit>
+			<trans-unit id="hash.description" resname="hash.description">
+				<target>Hash</target>
+			</trans-unit>
+			<trans-unit id="latest_tag.description" resname="latest_tag.description">
+				<target>Letzter Tag</target>
+			</trans-unit>
+			<trans-unit id="package_name.description" resname="package_name.description">
+				<target>Paketname</target>
+			</trans-unit>
+			<trans-unit id="description.description" resname="description.description">
+				<target>Beschreibung</target>
+			</trans-unit>
+			<trans-unit id="tags_status.description" resname="tags_status.description">
+				<target>Tags-Status</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

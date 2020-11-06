@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:tk_composer/Resources/Private/Language/locallang_csh" date="2020-09-28T00:00:00Z" product-name="tk_composer">
+		<header />
+		<body>
+			<trans-unit id="repository_url.description" resname="repository_url.description">
+				<source>URL of the repository, SSH or HTTP(S).</source>
+			</trans-unit>
+			<trans-unit id="type.description" resname="type.description">
+				<source>Type of the repository.</source>
+			</trans-unit>
+			<trans-unit id="access.description" resname="access.description">
+				<source>
+					&lt;ul&gt;
+						&lt;li&gt;Private repositories are only visible to assigned accounts.&lt;/li&gt;
+						&lt;li&gt;Protected repositories are visible to all logged in accounts.&lt;/li&gt;
+						&lt;li&gt;Public repositories are visible to everyone.&lt;/li&gt;
+					&lt;/ul&gt;
+				</source>
+			</trans-unit>
+			<trans-unit id="relation.description" resname="relation.description">
+				<source>Relation</source>
+			</trans-unit>
+			<trans-unit id="hash.description" resname="hash.description">
+				<source>Hash</source>
+			</trans-unit>
+			<trans-unit id="latest_tag.description" resname="latest_tag.description">
+				<source>Latest Tag</source>
+			</trans-unit>
+			<trans-unit id="package_name.description" resname="package_name.description">
+				<source>Package Name</source>
+			</trans-unit>
+			<trans-unit id="description.description" resname="description.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tags_status.description" resname="tags_status.description">
+				<source>Tags Status</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

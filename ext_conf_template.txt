@@ -1,0 +1,23 @@
+basic {
+    # cat=basic//a; type=string; label=LLL:EXT:tk_composer/Resources/Private/Language/locallang_conf.xlf:basic.storagePath
+    storagePath = composer
+    # cat=basic//b; type=string; label=LLL:EXT:tk_composer/Resources/Private/Language/locallang_conf.xlf:basic.repositoryRootPath
+    repositoryRootPath = packages
+}
+frontend {
+    # cat=frontend//a; type=boolean; label=LLL:EXT:tk_composer/Resources/Private/Language/locallang_conf.xlf:frontend.disable
+    disable = 0
+    # cat=frontend//b; type=string; label=LLL:EXT:tk_composer/Resources/Private/Language/locallang_conf.xlf:frontend.title
+    title = Composer
+
+    footer {
+        # cat=frontend//c; type=string; label=LLL:EXT:tk_composer/Resources/Private/Language/locallang_conf.xlf:frontend.footer.description
+        description =
+        # cat=frontend//d; type=string; label=LLL:EXT:tk_composer/Resources/Private/Language/locallang_conf.xlf:frontend.footer.name
+        name = Company Name
+        # cat=frontend//e; type=string; label=LLL:EXT:tk_composer/Resources/Private/Language/locallang_conf.xlf:frontend.footer.homepage
+        homepage = https://www.example.com
+        # cat=frontend//f; type=string; label=LLL:EXT:tk_composer/Resources/Private/Language/locallang_conf.xlf:frontend.footer.copyrightNotice
+        copyrightNotice = All rights reserved
+    }
+}

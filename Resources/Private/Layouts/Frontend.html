@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta data-namespace-typo3-fluid="true"
+            xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+            xmlns:composer="http://typo3.org/ns/TimonKreis/TkComposer/ViewHelpers">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="{f:uri.resource(extensionName: 'tk_composer', path: 'Icons/Favicon/apple-touch-icon.png')}"
+            rel="apple-touch-icon"
+            sizes="180x180">
+    <link href="{f:uri.resource(extensionName: 'tk_composer', path: 'Icons/Favicon/favicon-32x32.png')}"
+            rel="icon"
+            sizes="32x32"
+            type="image/png">
+    <link href="{f:uri.resource(extensionName: 'tk_composer', path: 'Icons/Favicon/favicon-16x16.png')}"
+            rel="icon"
+            sizes="16x16"
+            type="image/png">
+    <link href="{f:uri.resource(extensionName: 'tk_composer', path: 'Icons/Favicon/site.webmanifest')}" rel="manifest">
+    <link color="#4b515d"
+            href="{f:uri.resource(extensionName: 'tk_composer', path: 'Icons/Favicon/safari-pinned-tab.svg')}"
+            rel="mask-icon">
+    <link href="{f:uri.resource(extensionName: 'tk_composer', path: 'Icons/Favicon/favicon.ico')}" rel="shortcut icon">
+    <meta content="#4b515d" name="msapplication-TileColor">
+    <meta content="{f:uri.resource(extensionName: 'tk_composer', path: 'Icons/Favicon/browserconfig.xml')}"
+            name="msapplication-config">
+    <meta content="#4b515d" name="theme-color">
+
+    <link href="{f:uri.resource(extensionName: 'tk_composer', path: 'Css/main.min.css')}" rel="stylesheet">
+
+    <title>{composer:extConf(path: 'frontend/title')}</title>
+</head>
+<body>
+    <f:render section="Main" />
+
+    <script src="{f:uri.resource(extensionName: 'tk_composer', path: 'JavaScript/main.min.js')}"></script>
+</body>
+</html>

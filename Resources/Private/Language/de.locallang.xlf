@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="EXT:tk_composer/Resources/Private/Language/locallang" date="2020-09-28T00:00:00Z" product-name="tk_composer">
+		<header />
+		<body>
+			<trans-unit id="tx_tkcomposer_domain_model_account" resname="tx_tkcomposer_domain_model_account">
+				<target>Account</target>
+			</trans-unit>
+			<trans-unit id="tx_tkcomposer_domain_model_account.username" resname="tx_tkcomposer_domain_model_account.username">
+				<target>Benutzername</target>
+			</trans-unit>
+			<trans-unit id="tx_tkcomposer_domain_model_account.password" resname="tx_tkcomposer_domain_model_account.password">
+				<target>Passwort</target>
+			</trans-unit>
+			<trans-unit id="tx_tkcomposer_domain_model_account.all_packages" resname="tx_tkcomposer_domain_model_account.all_packages">
+				<target>Zugriff auf alle Pakete</target>
+			</trans-unit>
+			<trans-unit id="tx_tkcomposer_domain_model_account.packages" resname="tx_tkcomposer_domain_model_account.packages">
+				<target>Pakete</target>
+			</trans-unit>
+			<trans-unit id="tx_tkcomposer_domain_model_package" resname="tx_tkcomposer_domain_model_package">
+				<target>Paket</target>
+			</trans-unit>
+			<trans-unit id="tx_tkcomposer_domain_model_package.repository_url" resname="tx_tkcomposer_domain_model_package.repository_url">
+				<target>Repository-URL</target>
+			</trans-unit>
+			<trans-unit id="tx_tkcomposer_domain_model_package.type" resname="tx_tkcomposer_domain_model_package.type">
+				<target>Typ</target>
+			</trans-unit>
+			<trans-unit id="tx_tkcomposer_domain_model_package.access" resname="tx_tkcomposer_domain_model_package.access">
+				<target>Zugriff</target>
+			</trans-unit>
+			<trans-unit id="tx_tkcomposer_domain_model_package.relation" resname="tx_tkcomposer_domain_model_package.relation">
+				<target>Beziehung</target>
+			</trans-unit>
+			<trans-unit id="tx_tkcomposer_domain_model_package.hash" resname="tx_tkcomposer_domain_model_package.hash">
+				<target>Hash</target>
+			</trans-unit>
+			<trans-unit id="tx_tkcomposer_domain_model_package.latest_tag" resname="tx_tkcomposer_domain_model_package.latest_tag">
+				<target>Letzter Tag</target>
+			</trans-unit>
+			<trans-unit id="tx_tkcomposer_domain_model_package.package_name" resname="tx_tkcomposer_domain_model_package.package_name">
+				<target>Paketname</target>
+			</trans-unit>
+			<trans-unit id="tx_tkcomposer_domain_model_package.description" resname="tx_tkcomposer_domain_model_package.description">
+				<target>Beschreibung</target>
+			</trans-unit>
+			<trans-unit id="tx_tkcomposer_domain_model_package.tags_status" resname="tx_tkcomposer_domain_model_package.tags_status">
+				<target>Tags-Status</target>
+			</trans-unit>
+			<trans-unit id="access.private" resname="access.private">
+				<target>Privat (Zugriff nur für zugewiesene Accounts)</target>
+			</trans-unit>
+			<trans-unit id="access.protected" resname="access.protected">
+				<target>Geschützt (Zugriff für alle aktiven Accounts)</target>
+			</trans-unit>
+			<trans-unit id="access.public" resname="access.public">
+				<target>Öffentlich (Zugriff für jeden)</target>
+			</trans-unit>
+			<trans-unit id="type.git" resname="type.git">
+				<target>Git</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

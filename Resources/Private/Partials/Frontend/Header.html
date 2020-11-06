@@ -1,0 +1,25 @@
+<html data-namespace-typo3-fluid="true"
+        lang="en"
+        xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+        xmlns:composer="http://typo3.org/ns/TimonKreis/TkComposer/ViewHelpers">
+
+<nav class="navbar navbar-expand-lg navbar-dark stylish-color shadow">
+    <div class="container">
+        <a class="navbar-brand" href="{f:uri.page()}">{composer:extConf(path: 'frontend/title')}</a>
+
+        <f:if condition="{isLoggedIn}">
+            <f:then>
+                <a class="btn btn-primary" href="/logout">
+                    <span aria-hidden="true" class="fa fa-sign-out"></span>
+                    Logout
+                </a>
+            </f:then>
+            <f:else>
+                <a class="btn btn-primary" href="#" id="login-form-button">
+                    <span aria-hidden="true" class="fa fa-sign-in"></span>
+                    Login
+                </a>
+            </f:else>
+        </f:if>
+    </div>
+</nav>

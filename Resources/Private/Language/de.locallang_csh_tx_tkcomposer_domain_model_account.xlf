@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="EXT:tk_composer/Resources/Private/Language/locallang_csh" date="2020-09-28T00:00:00Z" product-name="tk_composer">
+		<header />
+		<body>
+			<trans-unit id="username.description" resname="username.description">
+				<target>Benutzername zur HTTP-Basic-Authentifizierung.</target>
+			</trans-unit>
+			<trans-unit id="password.description" resname="password.description">
+				<target>Passwort zur HTTP-Basic-Authentifizierung.</target>
+			</trans-unit>
+			<trans-unit id="all_packages.description" resname="all_packages.description">
+				<target>Wenn der Account Zugriff auf alle Pakete hat, müssen diese nicht mehr manuell zugewiesen werden.</target>
+			</trans-unit>
+			<trans-unit id="packages.description" resname="packages.description">
+				<target>Pakete, auf die dieser Account Zugriff hat.</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

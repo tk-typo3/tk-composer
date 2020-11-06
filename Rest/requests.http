@@ -1,0 +1,18 @@
+### /packages.json (unauthorized)
+GET {{host}}/packages.json
+Cache-Control: no-cache
+Cookie: XDEBUG_SESSION=PHPSTORM
+
+### /packages.json (authorized)
+GET {{host}}/packages.json
+Authorization: Basic {{auth}}
+Cache-Control: no-cache
+Cookie: XDEBUG_SESSION=PHPSTORM
+
+### /[package]$[hash].json
+GET {{host}}/include/{{package}}${{hash}}.json
+Authorization: Basic {{auth}}
+Cache-Control: no-cache
+Cookie: XDEBUG_SESSION=PHPSTORM
+
+###
