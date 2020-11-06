@@ -233,7 +233,7 @@ class Frontend implements MiddlewareInterface
                         throw new Exception(['Unable to access package "%s"', $packageName], 1603305970);
                     }
 
-                    if ($package->getAccess() == Package::ACCESS_PRIVATE) {
+                    if ($package->getAccess() == Package::ACCESS_PRIVATE && !$account->getAllPackages()) {
                         $allowed = false;
 
                         /** @var Package $allowedPackage */
