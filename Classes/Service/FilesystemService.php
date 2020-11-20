@@ -157,7 +157,7 @@ class FilesystemService implements SingletonInterface
         $directory = dirname($file);
 
         // Create directory if missing
-        if (!@is_dir($directory) && !@mkdir($directory, 0644, true)) {
+        if (!@is_dir($directory) && !@mkdir($directory, 0777, true)) {
             throw new Exception(['Unable to create directory for file "%s"', $file], 1602366654);
         }
 
