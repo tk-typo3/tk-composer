@@ -146,7 +146,7 @@ class PackageService implements SingletonInterface
                             json_encode($composer, JSON_UNESCAPED_SLASHES)
                         );
                     } catch (\Exception $e) {
-                        /** @see FilesystemService::writeContentToFile() */
+                        /** @see FilesystemService::setContentOfFile() */
                         if ($e->getCode() == 1602366654) {
                             throw new Exception(
                                 [
@@ -201,7 +201,7 @@ class PackageService implements SingletonInterface
 
                 $this->filesystemService->setContentOfFile($storageFile, '}}}', true);
             } catch (\Exception $e) {
-                /** @see FilesystemService::writeContentToFile() */
+                /** @see FilesystemService::setContentOfFile() */
                 if ($e->getCode() == 1602366654) {
                     throw new Exception(
                         [
