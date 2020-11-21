@@ -204,12 +204,13 @@ class Frontend implements MiddlewareInterface
             // Request to the synchronization URI set in extension configuration
             elseif ($requestUri == 'update') {
                 $errors = $this->packageService->updateAllPackages();
+                $data = [
+                    'status' => 'ok',
+                ];
 
                 if ($errors) {
-                    $data = [
-                        'status' => 'error',
-                        'packages' => [],
-                    ];
+                    $data['status'] = 'error';
+                    $data['packages'] = [];
 
                     foreach ($errors as $error) {
                         /** @var Package $package */
@@ -219,10 +220,6 @@ class Frontend implements MiddlewareInterface
 
                         $data['packages'][$package->getRepositoryUrl()] = $exception->getMessage();
                     }
-                } else {
-                    $data = [
-                        'status' => 'ok',
-                    ];
                 }
 
                 $response = $this->getJsonResponse($data);
