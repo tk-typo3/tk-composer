@@ -15,6 +15,9 @@
 			<trans-unit id="tx_tkcomposer_domain_model_account.all_packages" resname="tx_tkcomposer_domain_model_account.all_packages">
 				<source>Access to all packages</source>
 			</trans-unit>
+			<trans-unit id="tx_tkcomposer_domain_model_account.package_groups" resname="tx_tkcomposer_domain_model_account.package_groups">
+				<source>Package Groups</source>
+			</trans-unit>
 			<trans-unit id="tx_tkcomposer_domain_model_account.packages" resname="tx_tkcomposer_domain_model_account.packages">
 				<source>Packages</source>
 			</trans-unit>
@@ -48,7 +51,22 @@
 			<trans-unit id="tx_tkcomposer_domain_model_package.tags_status" resname="tx_tkcomposer_domain_model_package.tags_status">
 				<source>Tags Status</source>
 			</trans-unit>
+			<trans-unit id="tx_tkcomposer_domain_model_packagegroup" resname="tx_tkcomposer_domain_model_packagegroup">
+				<source>Package Group</source>
+			</trans-unit>
+			<trans-unit id="tx_tkcomposer_domain_model_packagegroup.name" resname="tx_tkcomposer_domain_model_packagegroup.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_tkcomposer_domain_model_packagegroup.packages" resname="tx_tkcomposer_domain_model_packagegroup.packages">
+				<source>Packages</source>
+			</trans-unit>
 			<trans-unit id="tx_tkcomposer_domain_model_package.accounts" resname="tx_tkcomposer_domain_model_package.accounts">
+				<source>Accounts</source>
+			</trans-unit>
+			<trans-unit id="tx_tkcomposer_domain_model_package.package_groups" resname="tx_tkcomposer_domain_model_package.package_groups">
+				<source>Package Groups</source>
+			</trans-unit>
+			<trans-unit id="tx_tkcomposer_domain_model_packagegroup.accounts" resname="tx_tkcomposer_domain_model_packagegroup.accounts">
 				<source>Accounts</source>
 			</trans-unit>
 		</body>

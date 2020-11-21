@@ -18,6 +18,12 @@
 					&lt;/ul&gt;
 				</target>
 			</trans-unit>
+			<trans-unit id="package_groups.description" resname="package_groups.description">
+				<target>Paketgruppen, die Zugriff auf dieses Paket gewähren.</target>
+			</trans-unit>
+			<trans-unit id="accounts.description" resname="accounts.description">
+				<target>Accounts, die Zugriff auf dieses Paket haben.</target>
+			</trans-unit>
 			<trans-unit id="relation.description" resname="relation.description">
 				<target>Beziehung</target>
 			</trans-unit>

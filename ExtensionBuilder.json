@@ -3,8 +3,8 @@
         {
             "config": {
                 "position": [
-                    240,
-                    21
+                    560,
+                    20
                 ]
             },
             "name": "New Model Object",
@@ -75,6 +75,17 @@
                             "lazyLoading": true,
                             "propertyIsExcludeField": true,
                             "relationDescription": "",
+                            "relationName": "packageGroups",
+                            "relationType": "manyToMany",
+                            "relationWire": "[wired]",
+                            "renderType": "selectMultipleSideBySide",
+                            "uid": "424776984059"
+                        },
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": true,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "",
                             "relationName": "packages",
                             "relationType": "manyToMany",
                             "relationWire": "[wired]",
@@ -88,8 +99,8 @@
         {
             "config": {
                 "position": [
-                    20,
-                    320
+                    60,
+                    460
                 ]
             },
             "name": "New Model Object",
@@ -223,6 +234,69 @@
                     "relations": []
                 }
             }
+        },
+        {
+            "config": {
+                "position": [
+                    200,
+                    120
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": false,
+                    "_default1_show": false,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": []
+                },
+                "name": "PackageGroup",
+                "objectsettings": {
+                    "addDeletedField": false,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "1061574520463"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": true,
+                            "propertyName": "name",
+                            "propertyType": "String",
+                            "uid": "642478061930"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": [
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": true,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "",
+                            "relationName": "packages",
+                            "relationType": "manyToMany",
+                            "relationWire": "[wired]",
+                            "renderType": "selectMultipleSideBySide",
+                            "uid": "884260926072"
+                        }
+                    ]
+                }
+            }
         }
     ],
     "properties": {
@@ -259,7 +333,7 @@
         {
             "src": {
                 "moduleId": 0,
-                "terminal": "relationWire_0",
+                "terminal": "relationWire_1",
                 "uid": "1381494079579"
             },
             "tgt": {
@@ -267,10 +341,34 @@
                 "terminal": "SOURCES",
                 "uid": "647310608010"
             }
+        },
+        {
+            "src": {
+                "moduleId": 2,
+                "terminal": "relationWire_0",
+                "uid": "884260926072"
+            },
+            "tgt": {
+                "moduleId": 1,
+                "terminal": "SOURCES",
+                "uid": "647310608010"
+            }
+        },
+        {
+            "src": {
+                "moduleId": 0,
+                "terminal": "relationWire_0",
+                "uid": "424776984059"
+            },
+            "tgt": {
+                "moduleId": 2,
+                "terminal": "SOURCES",
+                "uid": "1061574520463"
+            }
         }
     ],
     "log": {
-        "last_modified": "2020-11-01 01:09",
+        "last_modified": "2020-11-21 03:30",
         "extension_builder_version": "9.11.0",
         "be_user": "Timon Kreis (1)"
     }

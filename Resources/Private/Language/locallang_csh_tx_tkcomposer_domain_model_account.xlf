@@ -12,8 +12,11 @@
 			<trans-unit id="all_packages.description" resname="all_packages.description">
 				<source>If the account has access to all packages, the packages don&#039;t need to be added manually.</source>
 			</trans-unit>
+			<trans-unit id="package_groups.description" resname="package_groups.description">
+				<source>Add package groups available for this account.</source>
+			</trans-unit>
 			<trans-unit id="packages.description" resname="packages.description">
-				<source>Add packages available to this account.</source>
+				<source>Add packages available for this account.</source>
 			</trans-unit>
 		</body>
 	</file>

@@ -12,6 +12,9 @@
 			<trans-unit id="all_packages.description" resname="all_packages.description">
 				<target>Wenn der Account Zugriff auf alle Pakete hat, müssen diese nicht mehr manuell zugewiesen werden.</target>
 			</trans-unit>
+			<trans-unit id="package_groups.description" resname="package_groups.description">
+				<target>Paketgruppen, auf die dieser Account Zugriff hat.</target>
+			</trans-unit>
 			<trans-unit id="packages.description" resname="packages.description">
 				<target>Pakete, auf die dieser Account Zugriff hat.</target>
 			</trans-unit>

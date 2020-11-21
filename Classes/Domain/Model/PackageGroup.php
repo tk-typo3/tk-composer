@@ -4,7 +4,7 @@
  * @copyright by Timon Kreis - All rights reserved
  * @license https://www.gnu.org/licenses/gpl-3.0.de.html
  */
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace TimonKreis\TkComposer\Domain\Model;
 
@@ -14,29 +14,13 @@ use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 /**
  * @package TimonKreis\TkComposer\Domain\Model
  */
-class Account extends AbstractEntity
+class PackageGroup extends AbstractEntity
 {
-    /**
-     * @var string
-     */
-    protected $username = '';
-
     /**
      * @TYPO3\CMS\Extbase\Annotation\Validate("NotEmpty")
      * @var string
      */
-    protected $password = '';
-
-    /**
-     * @var bool
-     */
-    protected $allPackages = false;
-
-    /**
-     * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TimonKreis\TkComposer\Domain\Model\PackageGroup>
-     */
-    protected $packageGroups = null;
+    protected $name = '';
 
     /**
      * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
@@ -63,81 +47,28 @@ class Account extends AbstractEntity
      */
     protected function initializeObject() : void
     {
-        $this->packageGroups = $this->packageGroups ?: new ObjectStorage();
         $this->packages = $this->packages ?: new ObjectStorage();
     }
 
     /**
-     * Returns the username
+     * Returns the name
      *
      * @return string
      */
-    public function getUsername() : string
+    public function getName() : string
     {
-        return $this->username;
+        return $this->name;
     }
 
     /**
-     * Sets the username
+     * Sets the name
      *
-     * @param string $username
+     * @param string $name
      * @return void
      */
-    public function setUsername(string $username) : void
+    public function setName(string $name) : void
     {
-        $this->username = $username;
-    }
-
-    /**
-     * Returns the password
-     *
-     * @return string
-     */
-    public function getPassword() : string
-    {
-        return $this->password;
-    }
-
-    /**
-     * Sets the password
-     *
-     * @param string $password
-     * @return void
-     */
-    public function setPassword(string $password) : void
-    {
-        $this->password = $password;
-    }
-
-    /**
-     * Returns the allPackages flag
-     *
-     * @return bool
-     */
-    public function getAllPackages() : bool
-    {
-        return $this->allPackages;
-    }
-
-    /**
-     * Sets the allPackages flag
-     *
-     * @param bool $allPackages
-     * @return void
-     */
-    public function setAllPackages(bool $allPackages) : void
-    {
-        $this->allPackages = $allPackages;
-    }
-
-    /**
-     * Returns the boolean state of allPackages
-     *
-     * @return bool
-     */
-    public function isAllPackages() : bool
-    {
-        return $this->allPackages;
+        $this->name = $name;
     }
 
     /**
@@ -160,27 +91,6 @@ class Account extends AbstractEntity
     public function removePackage(Package $packageToRemove) : void
     {
         $this->packages->detach($packageToRemove);
-    }
-
-    /**
-     * Returns the package groups
-     *
-     * @return ObjectStorage<PackageGroup>
-     */
-    public function getPackageGroups() : ObjectStorage
-    {
-        return $this->packageGroups;
-    }
-
-    /**
-     * Sets the package groups
-     *
-     * @param ObjectStorage<PackageGroup> $packageGroups
-     * @return void
-     */
-    public function setPackageGroups(ObjectStorage $packageGroups) : void
-    {
-        $this->packageGroups = $packageGroups;
     }
 
     /**

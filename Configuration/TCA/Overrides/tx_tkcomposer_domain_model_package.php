@@ -51,9 +51,36 @@ $tca['columns']['package_name']['config']['type'] = 'passthrough';
 $tca['columns']['description']['config']['type'] = 'passthrough';
 $tca['columns']['tags_status']['config']['type'] = 'passthrough';
 
+// Add package group assignment to package side
+$tca['interface']['showRecordFieldList'] .= ', package_groups';
+$tca['types']['1']['showitem'] = str_replace(' access,', ' access, package_groups,', $tca['types']['1']['showitem']);
+$tca['columns']['package_groups'] = [
+    'exclude' => true,
+    'label' => 'LLL:EXT:tk_composer/Resources/Private/Language/locallang_db.xlf:tx_tkcomposer_domain_model_package.package_groups',
+    'displayCond' => 'FIELD:access:=:' . TimonKreis\TkComposer\Domain\Model\Package::ACCESS_PRIVATE,
+    'config' => [
+        'type' => 'select',
+        'renderType' => 'selectMultipleSideBySide',
+        'foreign_table' => 'tx_tkcomposer_domain_model_packagegroup',
+        'MM' => 'tx_tkcomposer_packagegroup_package_mm',
+        'MM_opposite_field' => 'packages',
+        'autoSizeMax' => 30,
+        'maxitems' => 9999,
+        'multiple' => 0,
+        'fieldControl' => [
+            'addRecord' => [
+                'disabled' => false,
+            ],
+            'listModule' => [
+                'disabled' => true,
+            ],
+        ],
+    ],
+];
+
 // Add account assignment to package side
 $tca['interface']['showRecordFieldList'] .= ', accounts';
-$tca['types']['1']['showitem'] = str_replace(' access,', ' access, accounts,', $tca['types']['1']['showitem']);
+$tca['types']['1']['showitem'] = str_replace(' package_groups,', ' package_groups, accounts,', $tca['types']['1']['showitem']);
 $tca['columns']['accounts'] = [
     'exclude' => true,
     'label' => 'LLL:EXT:tk_composer/Resources/Private/Language/locallang_db.xlf:tx_tkcomposer_domain_model_package.accounts',

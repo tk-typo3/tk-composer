@@ -25,8 +25,10 @@ $tca['columns']['password']['config']['renderType'] = 'passwordWizard';
 // Expand/collapse packages field and filter by private packages only
 $tca['columns']['all_packages']['onChange'] = 'reload';
 $tca['columns']['packages']['displayCond'] = 'FIELD:all_packages:=:0';
+$tca['columns']['package_groups']['displayCond'] = 'FIELD:all_packages:=:0';
 $tca['columns']['packages']['config']['foreign_table_where']
     = 'access = ' . TimonKreis\TkComposer\Domain\Model\Package::ACCESS_PRIVATE;
+unset($tca['columns']['package_groups']['config']['size']);
 unset($tca['columns']['packages']['config']['size']);
 
 // Group fields

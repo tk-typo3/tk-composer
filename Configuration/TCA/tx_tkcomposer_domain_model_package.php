@@ -128,7 +128,7 @@ return [
                 'type' => 'input',
                 'size' => 30,
                 'eval' => 'trim'
-        ],
+            ],
         ],
         'package_name' => [
             'exclude' => true,

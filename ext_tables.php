@@ -11,6 +11,10 @@ call_user_func(
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_tkcomposer_domain_model_package', 'EXT:tk_composer/Resources/Private/Language/locallang_csh_tx_tkcomposer_domain_model_package.xlf');
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_tkcomposer_domain_model_package');
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_tkcomposer_domain_model_packagegroup', 'EXT:tk_composer/Resources/Private/Language/locallang_csh_tx_tkcomposer_domain_model_packagegroup.xlf');
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_tkcomposer_domain_model_packagegroup');
+
     }
 );
 ## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder

@@ -1,8 +1,8 @@
 <?php
 return [
     'ctrl' => [
-        'title' => 'LLL:EXT:tk_composer/Resources/Private/Language/locallang_db.xlf:tx_tkcomposer_domain_model_account',
-        'label' => 'username',
+        'title' => 'LLL:EXT:tk_composer/Resources/Private/Language/locallang_db.xlf:tx_tkcomposer_domain_model_packagegroup',
+        'label' => 'name',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
@@ -11,14 +11,14 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-        'searchFields' => 'username,password',
-        'iconfile' => 'EXT:tk_composer/Resources/Public/Icons/tx_tkcomposer_domain_model_account.gif'
+        'searchFields' => 'name',
+        'iconfile' => 'EXT:tk_composer/Resources/Public/Icons/tx_tkcomposer_domain_model_packagegroup.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'hidden, username, password, all_packages, package_groups, packages',
+        'showRecordFieldList' => 'hidden, name, packages',
     ],
     'types' => [
-        '1' => ['showitem' => 'hidden, username, password, all_packages, package_groups, packages, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'hidden, name, packages, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'hidden' => [
@@ -66,71 +66,23 @@ return [
             ],
         ],
 
-        'username' => [
+        'name' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:tk_composer/Resources/Private/Language/locallang_db.xlf:tx_tkcomposer_domain_model_account.username',
+            'label' => 'LLL:EXT:tk_composer/Resources/Private/Language/locallang_db.xlf:tx_tkcomposer_domain_model_packagegroup.name',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
                 'eval' => 'trim'
             ],
         ],
-        'password' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:tk_composer/Resources/Private/Language/locallang_db.xlf:tx_tkcomposer_domain_model_account.password',
-            'config' => [
-                'type' => 'input',
-                'size' => 30,
-                'eval' => 'trim,required'
-            ],
-        ],
-        'all_packages' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:tk_composer/Resources/Private/Language/locallang_db.xlf:tx_tkcomposer_domain_model_account.all_packages',
-            'config' => [
-                'type' => 'check',
-                'items' => [
-                    '1' => [
-                        '0' => 'LLL:EXT:lang/locallang_core.xlf:labels.enabled'
-                    ]
-                ],
-                'default' => 0,
-            ]
-        ],
-        'package_groups' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:tk_composer/Resources/Private/Language/locallang_db.xlf:tx_tkcomposer_domain_model_account.package_groups',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectMultipleSideBySide',
-                'foreign_table' => 'tx_tkcomposer_domain_model_packagegroup',
-                'MM' => 'tx_tkcomposer_account_packagegroup_mm',
-                'size' => 10,
-                'autoSizeMax' => 30,
-                'maxitems' => 9999,
-                'multiple' => 0,
-                'fieldControl' => [
-                    'editPopup' => [
-                        'disabled' => false,
-                    ],
-                    'addRecord' => [
-                        'disabled' => false,
-                    ],
-                    'listModule' => [
-                        'disabled' => true,
-                    ],
-                ],
-            ],
-
-        ],
         'packages' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:tk_composer/Resources/Private/Language/locallang_db.xlf:tx_tkcomposer_domain_model_account.packages',
+            'label' => 'LLL:EXT:tk_composer/Resources/Private/Language/locallang_db.xlf:tx_tkcomposer_domain_model_packagegroup.packages',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
                 'foreign_table' => 'tx_tkcomposer_domain_model_package',
-                'MM' => 'tx_tkcomposer_account_package_mm',
+                'MM' => 'tx_tkcomposer_packagegroup_package_mm',
                 'size' => 10,
                 'autoSizeMax' => 30,
                 'maxitems' => 9999,

@@ -11,6 +11,7 @@ namespace TimonKreis\TkComposer\Domain\Repository;
 use Doctrine\DBAL\ParameterType;
 use TimonKreis\TkComposer\Domain\Model\Account;
 use TimonKreis\TkComposer\Domain\Model\Package;
+use TimonKreis\TkComposer\Domain\Model\PackageGroup;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 
 /**
@@ -54,13 +55,23 @@ class PackageRepository extends AbstractRepository
 
                 $packageUids = [];
 
+                /** @var PackageGroup $packageGroup */
+                foreach ($account->getPackageGroups() as $packageGroup) {
+                    /** @var Package $package */
+                    foreach ($packageGroup->getPackages() as $package) {
+                        $packageUids[$package->getUid()]
+                            = $queryBuilder->createNamedParameter($package->getUid(), ParameterType::INTEGER);
+                    }
+                }
+
                 /** @var Package $package */
                 foreach ($account->getPackages() as $package) {
-                    $packageUids[] = $queryBuilder->createNamedParameter($package->getUid(), ParameterType::INTEGER);
+                    $packageUids[$package->getUid()]
+                        = $queryBuilder->createNamedParameter($package->getUid(), ParameterType::INTEGER);
                 }
 
                 if ($packageUids) {
-                    $query->orWhere($queryBuilder->expr()->in('uid', $packageUids));
+                    $query->orWhere($queryBuilder->expr()->in('uid', array_values($packageUids)));
                 }
             }
         } else {

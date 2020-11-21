@@ -16,6 +16,12 @@ TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
 
 TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
     'tk_composer',
+    'Configuration/TsConfig/Page/packagegroup.typoscript',
+    'PageTS to allow only package group entries'
+);
+
+TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
+    'tk_composer',
     'Configuration/TsConfig/Page/package.typoscript',
     'PageTS to allow only package entries'
 );
