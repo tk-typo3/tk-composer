@@ -13,6 +13,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
+use TimonKreis\TkComposer\Domain\Model\Package;
 use TimonKreis\TkComposer\Service\PackageService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
@@ -55,6 +56,8 @@ class UpdatePackagesCommand extends Command
         $io = new SymfonyStyle($input, $output);
         $io->title('Updating all packages');
 
+        $errors = null;
+
         try {
             $forceReload = $input->getOption('force-reload') || is_string($input->getOption('force-reload'));
 
@@ -62,11 +65,24 @@ class UpdatePackagesCommand extends Command
                 $io->note('Running force reload');
             }
 
-            $this->packageService->updateAllPackages($forceReload);
+            $errors = $this->packageService->updateAllPackages($forceReload);
         } catch (\Exception $e) {
             $io->error($e->getMessage());
 
             return $e->getCode() ? $e->getCode() : 1;
+        }
+
+        if ($errors) {
+            foreach ($errors as $error) {
+                /** @var Package $package */
+                $package = $error['package'];
+                /** @var \Exception $exception */
+                $exception = $error['exception'];
+
+                $io->error($package->getRepositoryUrl() . ': ' . $exception->getMessage());
+            }
+
+            return 2;
         }
 
         $io->success('Packages sucessfully updated');

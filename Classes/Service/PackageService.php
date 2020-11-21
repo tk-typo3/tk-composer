@@ -235,17 +235,26 @@ class PackageService implements SingletonInterface
      * Update all packages
      *
      * @param bool $forceFullReload
+     * @return array
      * @throws \Exception
      */
-    public function updateAllPackages(bool $forceFullReload = false) : void
+    public function updateAllPackages(bool $forceFullReload = false) : array
     {
+        $errors = [];
         $packages = $this->packageRepository->findAll();
 
         /** @var Package $package */
         foreach ($packages as $package) {
             try {
                 $this->updatePackage($package, $forceFullReload);
-            } catch(\Exception $e) {}
+            } catch(\Exception $exception) {
+                $errors[] = [
+                    'package' => $package,
+                    'exception' => $exception,
+                ];
+            }
         }
+
+        return $errors;
     }
 }
