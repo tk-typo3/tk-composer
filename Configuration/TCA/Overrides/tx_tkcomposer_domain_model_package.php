@@ -14,7 +14,7 @@ $tca = &$GLOBALS['TCA']['tx_tkcomposer_domain_model_package'];
 $tca['ctrl']['iconfile'] = 'EXT:tk_composer/Resources/Public/Icons/tx_tkcomposer_domain_model_package.svg';
 
 // Modify repository URL field
-$tca['columns']['repository_url']['config']['size'] = 40;
+$tca['columns']['repository_url']['config']['size'] = 50;
 $tca['columns']['repository_url']['config']['max'] = 190;
 
 // Add type options
