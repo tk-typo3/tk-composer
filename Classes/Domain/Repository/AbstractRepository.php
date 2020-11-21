@@ -28,6 +28,10 @@ abstract class AbstractRepository extends Repository
      */
     protected $dataMapper;
 
+    /**
+     * @param ObjectManagerInterface $objectManager
+     * @param DataMapper $dataMapper
+     */
     public function __construct(ObjectManagerInterface $objectManager, DataMapper $dataMapper)
     {
         parent::__construct($objectManager);
