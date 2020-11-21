@@ -93,7 +93,7 @@ class GitService implements SingletonInterface
             // Receive list of tags and their commit ids
             /** @see https://git-scm.com/docs/git-show-ref */
             $response = $this->commandService->run(
-                'cd %s && git show-ref --tags',
+                'cd %s && git show-ref',
                 $this->filesystemService->getRepositoryPathByPackage($package)
             );
 
@@ -101,6 +101,10 @@ class GitService implements SingletonInterface
             $commitIds = [];
 
             foreach (array_filter($response) as $row) {
+                if (!strpos($row, 'refs/tags/')) {
+                    continue;
+                }
+
                 [$commitId, $tag] = preg_split('/\s+refs\/tags\//', $row);
 
                 $tags[] = $tag;
