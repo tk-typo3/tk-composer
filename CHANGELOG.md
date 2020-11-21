@@ -3,6 +3,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.0] - 2020-11-21
+* Fixed
+  * Receiving tag list changed to prevent errors if no tags are available.
+* Added
+  * Package groups added to bundle packages often used together.
+* Changed
+  * Errors while package updates collected and displayed.
+
 ## [0.1.4] - 2020-11-20
 * Fixed
   * Directory permissions fixed to prevent creating directories that cannot be written.
