@@ -13,6 +13,9 @@ $tca = &$GLOBALS['TCA']['tx_tkcomposer_domain_model_package'];
 // https://material.io/resources/icons/?icon=archive&style=baseline
 $tca['ctrl']['iconfile'] = 'EXT:tk_composer/Resources/Public/Icons/tx_tkcomposer_domain_model_package.svg';
 
+// Sort entries
+$tca['ctrl']['default_sortby'] = 'repository_url ASC';
+
 // Modify repository URL field
 $tca['columns']['repository_url']['config']['size'] = 50;
 $tca['columns']['repository_url']['config']['max'] = 190;

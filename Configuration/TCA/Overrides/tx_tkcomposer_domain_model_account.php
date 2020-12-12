@@ -13,6 +13,9 @@ $tca = &$GLOBALS['TCA']['tx_tkcomposer_domain_model_account'];
 // https://material.io/resources/icons/?icon=account_box&style=baseline
 $tca['ctrl']['iconfile'] = 'EXT:tk_composer/Resources/Public/Icons/tx_tkcomposer_domain_model_account.svg';
 
+// Sort entries
+$tca['ctrl']['default_sortby'] = 'username ASC';
+
 $tca['columns']['username']['config']['size'] = 50;
 
 // Hide fields for user

@@ -13,6 +13,9 @@ $tca = &$GLOBALS['TCA']['tx_tkcomposer_domain_model_packagegroup'];
 // https://material.io/resources/icons/?icon=group_work&style=baseline
 $tca['ctrl']['iconfile'] = 'EXT:tk_composer/Resources/Public/Icons/tx_tkcomposer_domain_model_packagegroup.svg';
 
+// Sort entries
+$tca['ctrl']['default_sortby'] = 'name ASC';
+
 // Modify name size
 $tca['columns']['name']['config']['size'] = 40;
 
