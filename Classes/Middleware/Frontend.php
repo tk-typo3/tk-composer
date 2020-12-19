@@ -13,6 +13,7 @@ use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use TimonKreis\TkComposer\Domain\Model\Package;
+use TimonKreis\TkComposer\Domain\Model\PackageGroup;
 use TimonKreis\TkComposer\Domain\Repository\AccountRepository;
 use TimonKreis\TkComposer\Domain\Repository\PackageRepository;
 use TimonKreis\TkComposer\Exception;
@@ -248,9 +249,10 @@ class Frontend implements MiddlewareInterface
 
                     if ($package->getAccess() == Package::ACCESS_PRIVATE && !$account->getAllPackages()) {
                         $allowed = false;
+                        $packages = $this->packageRepository->findByAccount($account);
 
                         /** @var Package $allowedPackage */
-                        foreach ($account->getPackages() as $allowedPackage) {
+                        foreach ($packages as $allowedPackage) {
                             if ($allowedPackage->getUid() == $package->getUid()) {
                                 $allowed = true;
 
