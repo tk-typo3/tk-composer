@@ -40,17 +40,19 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Toggle login mask
-  document.getElementById('login-form-button').addEventListener('click', function(event) {
-    var mask = document.getElementById('login-mask');
+  if (document.getElementById('login-form-button')) {
+    document.getElementById('login-form-button').addEventListener('click', function(event) {
+      var mask = document.getElementById('login-mask');
 
-    event.preventDefault();
+      event.preventDefault();
 
-    mask.classList.toggle('d-none');
+      mask.classList.toggle('d-none');
 
-    if (!mask.classList.contains('d-none')) {
-      document.getElementById('fUsername').focus();
-    }
+      if (!mask.classList.contains('d-none')) {
+        document.getElementById('fUsername').focus();
+      }
 
-    return false;
-  });
+      return false;
+    });
+  }
 });
