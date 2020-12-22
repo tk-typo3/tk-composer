@@ -270,7 +270,7 @@ class Frontend implements MiddlewareInterface
 
                 // Update package if package file is missing
                 if (!@is_file($path)) {
-                    $this->packageService->updatePackage($package);
+                    $this->packageService->updatePackage($package, true);
                 }
 
                 $content = @file_get_contents($path);
