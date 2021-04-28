@@ -121,9 +121,8 @@ class FilesystemService implements SingletonInterface
         $path = strpos($repositoryUrl, '//') !== false
             ? explode('/', $repositoryUrl, 4)[3]
             : explode(':', $repositoryUrl)[1];
-        $path = rtrim($path, '/') . '/';
 
-        return $path;
+        return rtrim($path, '/') . '/';
     }
 
     /**
@@ -179,8 +178,6 @@ class FilesystemService implements SingletonInterface
             $path = Environment::getPublicPath() . '/' . $path;
         }
 
-        $path = rtrim($path, '/') . '/';
-
-        return $path;
+        return rtrim($path, '/') . '/';
     }
 }

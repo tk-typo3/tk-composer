@@ -56,8 +56,6 @@ class UpdatePackagesCommand extends Command
         $io = new SymfonyStyle($input, $output);
         $io->title('Updating all packages');
 
-        $errors = null;
-
         try {
             $forceReload = $input->getOption('force-reload') || is_string($input->getOption('force-reload'));
 
@@ -69,7 +67,7 @@ class UpdatePackagesCommand extends Command
         } catch (\Exception $e) {
             $io->error($e->getMessage());
 
-            return $e->getCode() ? $e->getCode() : 1;
+            return $e->getCode() ?: 1;
         }
 
         if ($errors) {

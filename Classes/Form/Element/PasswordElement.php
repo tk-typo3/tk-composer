@@ -40,6 +40,7 @@ class PasswordElement extends InputTextElement
             'data-formengine-input-name' => $parameterArray['itemFormElName'],
         ];
 
+        /** @var StandaloneView $standaloneView */
         $standaloneView = GeneralUtility::makeInstance(StandaloneView::class);
         $standaloneView->setTemplatePathAndFilename('EXT:tk_composer/Resources/Private/Templates/Backend/Password.html');
         $standaloneView->assignMultiple([

@@ -13,7 +13,6 @@ use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use TimonKreis\TkComposer\Domain\Model\Package;
-use TimonKreis\TkComposer\Domain\Model\PackageGroup;
 use TimonKreis\TkComposer\Domain\Repository\AccountRepository;
 use TimonKreis\TkComposer\Domain\Repository\PackageRepository;
 use TimonKreis\TkComposer\Exception;
@@ -98,7 +97,6 @@ class Frontend implements MiddlewareInterface
     {
         $requestUri = rawurldecode(ltrim($request->getAttribute('normalizedParams')->getRequestUri(), '/'));
         $requestUri = strpos($requestUri, '?') !== false ? strstr($requestUri, '?', true) : $requestUri;
-        $response = null;
 
         try {
             // Human-readable frontend
@@ -122,6 +120,7 @@ class Frontend implements MiddlewareInterface
                 $account = $this->accountService->getAuthorizedAccount();
                 $packages = $this->packageRepository->findByAccount($account);
 
+                /** @var StandaloneView $standaloneView */
                 $standaloneView = GeneralUtility::makeInstance(StandaloneView::class);
                 $standaloneView->setLayoutRootPaths(['EXT:tk_composer/Resources/Private/Layouts']);
                 $standaloneView->setPartialRootPaths(['EXT:tk_composer/Resources/Private/Partials']);
@@ -251,7 +250,6 @@ class Frontend implements MiddlewareInterface
                         $allowed = false;
                         $packages = $this->packageRepository->findByAccount($account);
 
-                        /** @var Package $allowedPackage */
                         foreach ($packages as $allowedPackage) {
                             if ($allowedPackage->getUid() == $package->getUid()) {
                                 $allowed = true;
