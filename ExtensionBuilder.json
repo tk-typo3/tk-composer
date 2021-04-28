@@ -312,7 +312,7 @@
             "sourceLanguage": "en",
             "state": "stable",
             "targetVersion": "10.4.0-10.4.99",
-            "version": "0.3.2"
+            "version": "1.0.0"
         },
         "extensionKey": "tk_composer",
         "name": "Composer",
